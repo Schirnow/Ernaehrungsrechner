@@ -69,13 +69,13 @@ public class CalculationApp extends JFrame /*implements ActionListener /*MouseLi
 		// Zu ersetzen, wenn Profile Datei schreiben und lesen kann
 		profiles.add(new Profile("V1", 24, 24,10,300,2000,4000));
 		profiles.add(new Profile("Intensiv", 30, 20,10,300,2000,4000));
-		System.out.println("Folgende Profile erstellt:\n" + profiles.get(0) + '\n' + profiles.get(1));
+		//System.out.println("Folgende Profile erstellt:\n" + profiles.get(0) + '\n' + profiles.get(1));
 		nutritions.add(new Nutrition ("--", "--", 0, 0, ""));
 		nutritions.add(new Nutrition ("Fresenius", "Fresubin Energy", 1.5, 500, "oral"));
 		nutritions.add(new Nutrition ("Fresenius", "Fresubin Energy Fibre", 1.5, 500, "oral"));
 		nutritions.add(new Nutrition ("Fresenius", "Fresubin Renal", 2.0, 500, "oral"));
 		nutritions.add(new Nutrition ("Abbot", "Olimel", 1.08, 1500, "iv"));
-		System.out.println("Folgende Ernaehreungen erstellt:\n" + nutritions);
+		//System.out.println("Folgende Ernaehreungen erstellt:\n" + nutritions);
 		
 
 		String[] profileChoise = new String[profiles.size()+1];
@@ -153,10 +153,6 @@ public class CalculationApp extends JFrame /*implements ActionListener /*MouseLi
 		c.gridx = 0;
 		c.gridy = 5;
 		panel.add(nutritionChoiseL, c);
-		
-		/*String[] nutritionChoisesOral = new String[nutritions.size() + 1];
-		nutritionChoises[0] = "--";
-		for (Nutrition e: nutritions){nutritionChoises[nutritions.indexOf(e) + 1] = e.getName() + " " + e.getKcallMl() + " kcall/ml";}*/
 		
 		ArrayList<String> nutritionChoice = new ArrayList<>();
 		nutritionChoice.add("--");
@@ -292,23 +288,7 @@ public class CalculationApp extends JFrame /*implements ActionListener /*MouseLi
 		calculate.addActionListener(calculateResult);
 	}
 	
-	/*private boolean validateKcall(String value){
-		boolean notValide = false;
-		int kcallD = 0;
-		try{
-			kcallD = Integer.parseInt(value);
-		} catch (NumberFormatException e){
-			notValide = true;
-		}
-		if (kcallD < activeProfile.getMinKcallD() || kcallD > activeProfile.getMaxKcallD() || notValide){
-			String message = "Kaloriebedarf muss eine ganze Zahl zwischen " + activeProfile.getMinKcallD() + " und " + activeProfile.getMaxKcallD() + " sein.";
-			String name = "Falsche Kaloriebedarf-Eingabe";
-			showEntryError(message, name);
-			return false;
-		}
-		return true;
-	}*/
-	
+
 	// Fuehle Array choised_nutritions
 	private void fillChoisedNutrition(String choise){
 		if (choisedNutritions != null) choisedNutritions.clear();
