@@ -59,11 +59,11 @@ public class CalculationApp extends JFrame /*implements ActionListener /*MouseLi
 		add(panel);
 		
 		var profileL = new JLabel("Ausgewählter Profil:");
-		//c.ipady = 3;
+		c.ipady = 3;
 		c.gridx = 0;
 		c.gridy = 0;
 		//c.ipady = 2;
-		c.anchor = GridBagConstraints.FIRST_LINE_START;
+		c.anchor = GridBagConstraints.NORTH;
 		panel.add(profileL,c);
 		
 		// Zu ersetzen, wenn Profile Datei schreiben und lesen kann
@@ -85,8 +85,8 @@ public class CalculationApp extends JFrame /*implements ActionListener /*MouseLi
 		var profileCB = new JComboBox(profileChoise);
 		c.gridx = 1;
 		c.gridy = 0;
-		//c.ipady = 3;
-		c.anchor = GridBagConstraints.PAGE_START;
+		c.ipady = 3;
+		c.anchor = GridBagConstraints.NORTH;
 		panel.add(profileCB, c);
 		
 		var sep = new JSeparator();
@@ -95,11 +95,11 @@ public class CalculationApp extends JFrame /*implements ActionListener /*MouseLi
 		c.gridx = 0;
 		c.gridy = 1;
 		c.gridwidth = 3;
-		//c.ipady = 10;
+		c.ipady = 10;
 		//c.anchor = GridBagConstraints.CENTER;
 		c.fill = GridBagConstraints.HORIZONTAL;
 
-		panel.add(new JSeparator(),c);
+		panel.add(sep,c);
 		
 		// Auswahl was berechnet wird
 		var calculationChoiseL = new JLabel("Berechne:");
